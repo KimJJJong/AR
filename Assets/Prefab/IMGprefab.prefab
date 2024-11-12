@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1377809358259530945}
   - component: {fileID: 6568872973400711705}
-  - component: {fileID: 8200542969555047162}
-  - component: {fileID: -5672368598428727020}
+  - component: {fileID: 4390962345485422282}
+  - component: {fileID: 8526320419295043825}
   m_Layer: 5
   m_Name: IMGprefab
   m_TagString: Untagged
@@ -46,7 +46,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6451038041021498370}
   m_CullTransparentMesh: 1
---- !u!114 &8200542969555047162
+--- !u!114 &4390962345485422282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,20 +89,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &-5672368598428727020
+      m_Calls: []
+--- !u!114 &8526320419295043825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

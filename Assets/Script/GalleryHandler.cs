@@ -7,7 +7,7 @@ public class GalleryHandler : MonoBehaviour
     public GameObject galleryPanel;
     public GameObject imagePrefab;
     public GameObject FullImgPanel; 
-    public Image fullScreenImage; 
+    public RawImage fullScreenImage; 
 
     private void Start()
     {
@@ -29,6 +29,19 @@ public class GalleryHandler : MonoBehaviour
             Texture2D texture = LoadTextureFromFile(file);
 
             newImage.GetComponent<RawImage>().texture = texture;
+
+            RawImage imageComponent = newImage.GetComponent<RawImage>();
+            imageComponent.texture = texture;
+
+            Button imageButton = newImage.GetComponent<Button>();
+            
+            if (imageButton != null)
+            {
+                imageButton.onClick.AddListener(() => {
+                    Debug.Log("Image clicked");
+                    ShowFullScreenImage(texture);
+                });
+            }
         }
     }
 
@@ -38,25 +51,6 @@ public class GalleryHandler : MonoBehaviour
         Texture2D texture = new Texture2D(2, 2);
         texture.LoadImage(fileData);
         return texture;
-    }
-
-    public void AddImageToGallery(Texture2D imageTexture)
-    {
-        GameObject newImageObject = Instantiate(imagePrefab, galleryPanel.transform);
-
-        RawImage imageComponent = newImageObject.GetComponent<RawImage>();
-        imageComponent.texture = imageTexture;
-
-        Button imageButton = newImageObject.GetComponent<Button>();
-    
-        if (imageButton != null)
-        {
-            imageButton.onClick.AddListener(() => {
-                Debug.Log("Image clicked");
-                ShowFullScreenImage(imageTexture);
-            });
-            imageButton.onClick.AddListener(() => ShowFullScreenImage(imageTexture));
-        }
     }
 
 
