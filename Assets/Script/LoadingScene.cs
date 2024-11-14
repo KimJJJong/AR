@@ -10,8 +10,8 @@ public class LoadingScene : MonoBehaviour
     public GameObject petNaming;
     public GameObject effect;
 
-    public float speed = 150f;        // 사각형 이동 속도
-    public float verticalSpeed = 150f; // 수직 오브젝트 이동 속도
+    public float speed = 300f;        // 사각형 이동 속도
+    public float verticalSpeed = 300f; // 수직 오브젝트 이동 속도
     public float stopYPosition = -350f; // 오브젝트가 멈출 y 좌표 (원하는 값으로 설정)
 
     private bool eggActivated = false;
