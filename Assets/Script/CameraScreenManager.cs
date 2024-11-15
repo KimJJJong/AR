@@ -5,11 +5,28 @@ public class CameraScreenManager : MonoBehaviour
 {
     public ScreenshotHandler screenshotHandler;
     public GalleryHandler galleryHandler;
-    public GameObject GalleryPanel;
+    public GameObject galleryPanel;
 
-    void Start()
+    public GameObject blackPanel;
+    public GameObject tutorialText;
+    public GameObject cameraButtons;
+    //public GameObject menuButton;
+    public GameObject infoPanel;
+
+    void start()
     {
-        GalleryPanel.SetActive(false);
+        galleryPanel.SetActive(false);
+        cameraButtons.SetActive(false);
+    }
+    
+    public void CameraModeStart()
+    {
+        blackPanel.SetActive(false);
+        tutorialText.SetActive(false);
+        //menuButton.SetActive(false);
+        infoPanel.SetActive(false);
+        cameraButtons.SetActive(true);
+        Debug.Log("Camera Opened");
     }
 
     public void OnCaptureButtonPressed()
@@ -19,12 +36,22 @@ public class CameraScreenManager : MonoBehaviour
 
     public void OnGalleryButtonPressed()
     {
-        GalleryPanel.SetActive(true);
+        galleryPanel.SetActive(true);
         galleryHandler.LoadGalleryImages();
     }
 
     public void ExitGalleryButtonPressed()
     {
-        GalleryPanel.SetActive(false);
+        galleryPanel.SetActive(false);
+    }
+
+    public void ExitCameraButtonPressed()
+    {
+        blackPanel.SetActive(true);
+        tutorialText.SetActive(true);
+        galleryPanel.SetActive(false);
+        //menuButton.SetActive(true);
+        infoPanel.SetActive(true);
+        cameraButtons.SetActive(false);
     }
 }
