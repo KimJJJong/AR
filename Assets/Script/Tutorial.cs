@@ -98,20 +98,6 @@ public class Tutorial : MonoBehaviour
                 break;
             case 7:
                 //                textContent.text = "";
-                paneText.text = tutorial[7];
-
-//                _process++;
-
-                break;
-            case 8:
-                //                textContent.text = "";
-                paneText.text = tutorial[8];
-
-//                _process++;
-
-                break;
-            case 9:
-                //                textContent.text = "";
                 paneText.text = " ";
                 panel.SetActive(false);
                 BlackPanel.SetActive(false);
@@ -127,11 +113,11 @@ public class Tutorial : MonoBehaviour
         tutorial[1] = "나는 어디에 있을까? 삐? \n [펭라를 원하는 곳에 놓아 주세요]";
         tutorial[2] = "펭라를 쓰다듬어 보세요!";
         tutorial[3] = "참 잘했어요!";
-        tutorial[4] = "미션 인증하기\n 이 버튼은 설정한~~";
-        tutorial[5] = "성장 일지\n 이 버튼은 설정한~~";
-        tutorial[6] = "펫 레벨\n 이버튼은 나의 펫~~";
-        tutorial[7] = "마이 홈\n 이버튼은 나와 함께 생활하는~~";
-        tutorial[8] = "AR/ ON/OFF\n 혹시 나를 만나는 동안 배경이~~";
+        tutorial[4] = "마이 홈\n 이버튼은 나와 함께 생활하는~~"; 
+        tutorial[5] = "미션 인증하기\n 이 버튼은 설정한~~";
+        tutorial[6] = "성장 일지\n 이 버튼은 설정한~~";    
+        //        tutorial[6] = "펫 레벨\n 이버튼은 나의 펫~~";
+        //        tutorial[8] = "AR/ ON/OFF\n 혹시 나를 만나는 동안 배경이~~";나와함께 생활하는 자취방을 담고 내 
 
     }
 
